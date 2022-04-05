@@ -1,13 +1,12 @@
 <?php
 ///Recuperation des donnees du fichier
-function json_to_array()
+function findStates()
 {
     $dataJson = file_get_contents(PATH_DB);
-    // $data = json_decode($dataJson,true);
     return $dataJson;
 }
 //Enregistrement et Mis a jour des donnees du fichier
-function array_to_json($key,$newTask)
+function addEtat($key,$newTask)
 {
     // ici on récupere le contenu du ficher json sous format string
     $dataJson = file_get_contents(PATH_DB);
